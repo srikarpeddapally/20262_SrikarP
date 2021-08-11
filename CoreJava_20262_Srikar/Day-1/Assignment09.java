@@ -5,12 +5,13 @@ public class Assignment09
 
 	public static void main(String[] args) 
 	{
-		int a[]= {1,2,3,4,5,6, 0, 1 ,1,7};
-		int count=0;
+		int a[]= {1,2,3,4,5,6, 0, 1 ,1,1,1,1,1,1,7};
+		int count;
 		int maxcount=0;
 		int duplicate_item=0;;
 		for(int i=0;i<a.length;i++)
 		{
+			count=1;
 			for(int j=i+1;j<a.length;j++)
 				
 			{
@@ -19,6 +20,7 @@ public class Assignment09
 					count++;
 				}
 			}
+			
 			if(maxcount<count) {
 				maxcount=count;
 				duplicate_item=a[i];

@@ -24,8 +24,8 @@ public class Assignment10 {
 				sn=a[i];
 			}
 		}
-		System.out.println(fn+" largest ");
-		System.out.println(sn +" second largest");
+		System.out.println(fn+" is largest ");
+		System.out.println(sn +" is second largest");
 	}
 
 }
