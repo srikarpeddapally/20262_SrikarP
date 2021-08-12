@@ -1,7 +1,7 @@
 package com.assignments.day2;
 
 public class Truck extends Car{
-	public Truck(int s, double p, String c) {
+	public Truck(int s, double p, String c,int weight) {
 		super(s, p, c);
 		// TODO Auto-generated constructor stub
 	}

@@ -1,7 +1,7 @@
 package com.assignments.day2;
 
 public class Sedan extends Car{
-	public Sedan(int s, double p, String c) {
+	public Sedan(int s, double p, String c, int length) {
 		super(s, p, c);
 		// TODO Auto-generated constructor stub
 	}
