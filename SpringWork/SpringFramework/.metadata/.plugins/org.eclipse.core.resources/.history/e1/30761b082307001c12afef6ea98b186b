@@ -1,0 +1,43 @@
+package com.sonata.MyController;
+
+import org.springframework.ui.ModelMap;
+
+import java.util.Map;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@Controller
+@RequestMapping("/hello")
+public class HelloWorld {
+	
+	@RequestMapping(method = RequestMethod.GET)
+	
+	public String sayHi() {
+		return "Hi! Welcome to Sonata";
+	}
+	
+	@RequestMapping(value="/myView")
+	@ResponseBody
+	public String MyMethod() {
+		return "Welcome to spring Web";
+	}
+	
+	@RequestMapping(value = "/myPageView")
+	public String MyShow(ModelMap model) {
+		model.addAttribute("message1","My Spring Web Page");
+		return "myPage1";
+	}
+	
+	@RequestMapping(value = "/sayspring", method = RequestMethod.GET)
+	// Return type is String
+	// Receives Map type model object as argument
+	public String helloWorld(Map<String, String> map) {
+		map.put("message2", "Spring MVC Example!");
+
+		return "mypage2";
+	}
+}

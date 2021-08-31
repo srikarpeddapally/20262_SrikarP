@@ -1,0 +1,11 @@
+package com.sonata.Model;
+
+import org.springframework.lang.NonNull;
+
+public class User {
+
+	private String userName;
+
+	private String password;
+
+}

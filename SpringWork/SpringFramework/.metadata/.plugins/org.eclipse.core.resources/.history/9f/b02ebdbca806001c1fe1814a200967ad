@@ -1,0 +1,16 @@
+package com.sonata.Qualifier;
+
+public class YourAddress implements AddressInterface {
+
+	@Override
+	public String getWholeAddress() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	private int streetNumber = 11;
+	private String streetName = "Bgl street";
+	private String city = "Paulo";
+	private String country = "IND";
+
+}

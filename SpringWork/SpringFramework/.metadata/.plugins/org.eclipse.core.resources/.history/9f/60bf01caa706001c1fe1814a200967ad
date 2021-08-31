@@ -1,0 +1,6 @@
+package com.sonata.AddressInterface;
+
+public interface AddressInterface {
+	String getWholeAddress();
+
+}

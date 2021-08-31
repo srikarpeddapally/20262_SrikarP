@@ -1,0 +1,63 @@
+package com.sonata.Controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.sonata.Model.Login;
+import com.sonata.Repository.LoginRepository;
+
+public class LoginController {
+	
+Optional<Login> p1;
+	
+	@Autowired
+	private LoginRepository prepository;
+	
+	@GetMapping("/login")
+	public List<Login> getAllProducts()
+	{
+		System.out.println(prepository.findAll());
+		return prepository.findAll();
+	}
+	
+	@GetMapping(value= "/products/{id}")
+	public ResponseEntity getProductsById(@PathVariable(value="Username") String Username)
+	{
+		p1= prepository.findById(Username);
+		return ResponseEntity.ok().body(p1);
+	}
+	
+//	@PostMapping(value = "/products")
+//	public Login saveProduct(@RequestBody Login l)
+//	{
+//		return prepository.save(l);
+//	}
+//	
+	@PutMapping(value="/products/{id}")
+	public ResponseEntity updateProduct(@PathVariable(value="id") Long pId, @Valid @RequestBody ProductDetails pdata) {
+		p1 = prepository.findBy(Username);
+		Login p2 = p1.get();
+		
+		p2.setUsername(Username)
+		p2.setpId(pdata.getpId());
+		p2.setpName(pdata.getpName());
+		p2.setpPrice(pdata.getpPrice());
+		
+		Login updateProduct = prepository.save(p2);
+		return ResponseEntity.ok(updateProduct);
+	}
+	
+	@DeleteMapping(value="/products/{id}")
+	public ResponseEntity deleteProduct(@PathVariable(value="id")Long pId) {
+		prepository.deleteById(pId);
+		return ResponseEntity.noContent().build();
+	}
+}

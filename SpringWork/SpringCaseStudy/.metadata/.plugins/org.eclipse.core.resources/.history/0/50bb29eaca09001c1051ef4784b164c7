@@ -1,0 +1,31 @@
+package com.sonata.Model;
+
+import java.util.Date;
+
+public class Task {
+	
+	private int Owner_ID;
+	private int Creator_ID;
+	private String Name;
+	private String Description;
+	private String Status;
+	private String Priority;
+	private String Notes;
+	private String Bookmarked;
+	private Date Created_On;
+	private Date Status_Changed_On;
+	
+	public void displayTask() {
+		System.out.println(Owner_ID);
+		System.out.println(Creator_ID);
+		System.out.println(Name);
+		System.out.println(Description);
+		System.out.println(Status);
+		System.out.println(Priority);
+		System.out.println(Notes);
+		System.out.println(Bookmarked);
+		System.out.println(Created_On);
+		System.out.println(Status_Changed_On);
+	}
+
+}

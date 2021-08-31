@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="SpringJDBCExample"/>
+<aop-project name="SpringRESTAngularExample"/>
+<aop-project name="mvc_basics_RequestMapping"/>
+<aop-project name="SpringCoreSimpleExample"/>
+<aop-project name="SpringFormErrorExample"/>
+<aop-project name="SpringJPACRUDExample"/>
+<aop-project name="SpringMVCProject"/>
+<aop-project name="SpringLogin"/>
+</aop-reference-model>

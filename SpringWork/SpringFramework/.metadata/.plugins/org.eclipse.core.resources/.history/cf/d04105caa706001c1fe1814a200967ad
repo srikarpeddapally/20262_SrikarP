@@ -1,0 +1,21 @@
+package com.sonata.AddressInterface;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+
+import com.sonata.SpringCoreSimpleExampleApplication;
+
+@SpringBootApplication
+public class Main {
+
+	public static void main(String[] args) {
+		ApplicationContext context = SpringApplication.run(SpringCoreSimpleExampleApplication.class, args);
+		PersonQualifier person = context.getBean(PersonQualifier.class);
+		System.out.println(person);
+
+	}
+
+}

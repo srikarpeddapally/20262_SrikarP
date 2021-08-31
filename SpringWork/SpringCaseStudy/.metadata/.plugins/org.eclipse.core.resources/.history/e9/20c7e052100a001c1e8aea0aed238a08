@@ -1,0 +1,23 @@
+package com.sonata.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.sonata.Repository.LoginRepository;
+
+@Controller
+@RequestMapping("/login")
+public class LoginController {
+	
+	@Autowired
+	LoginRepository loginrepo;
+	
+	@GetMapping("")
+	public String homePage() {
+		return "index";
+	}
+	
+
+}

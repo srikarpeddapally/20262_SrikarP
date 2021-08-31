@@ -1,0 +1,62 @@
+package com.sonata.CustomQualifier;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.sonata.AddressInterface.AddressInterface;
+
+@Component
+public class PersonCustomQualifier {
+	
+	private String name = "sao";
+	private int age =16;
+	private float height = 5.9f;
+	private boolean isProgrammer = true;
+	
+	@Autowired
+	@MyCustomQualifier("myaddress")
+	private AddressInterface address;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public float getHeight() {
+		return height;
+	}
+
+	public void setHeight(float height) {
+		this.height = height;
+	}
+
+	public boolean isProgrammer() {
+		return isProgrammer;
+	}
+
+	public void setProgrammer(boolean isProgrammer) {
+		this.isProgrammer = isProgrammer;
+	}
+
+	public AddressInterface getAddress() {
+		return address;
+	}
+
+	public void setAddress(AddressInterface address) {
+		this.address = address;
+	}
+	
+	
+
+}

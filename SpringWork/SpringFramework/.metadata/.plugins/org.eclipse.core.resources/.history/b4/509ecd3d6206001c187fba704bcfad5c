@@ -1,0 +1,6 @@
+package com.sonata.AddressInterface;
+
+public class MyAddress implements AddressInterface {
+	
+
+}

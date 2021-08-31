@@ -1,0 +1,26 @@
+package com.sonata.CustomQualifier;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+
+@Configuration
+public class BeanConfiguration {
+	@Bean(name = "myaddress")
+    public AddressInterfaceCQ getMyAddress() {
+        AddressInterfaceCQ address =  new MyAddressCQ();
+        return address;
+    }
+   
+    @Bean(name = "youraddress")
+    public AddressInterfaceCQ getYourAddress() {
+        AddressInterfaceCQ address =  new YourAddressCQ();
+        return address;
+    }
+
+    @Bean
+    public PersonCustomQualifier getPersonCustomQualifier() {
+        PersonCustomQualifier person = new PersonCustomQualifier();
+        return person;
+    }
+}

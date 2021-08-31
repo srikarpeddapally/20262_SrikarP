@@ -1,0 +1,12 @@
+package com.sonata.AddressInterface;
+
+public class MyAddress implements AddressInterface {
+
+	@Override
+	public String getWholeAddress() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

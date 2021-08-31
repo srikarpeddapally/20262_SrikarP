@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\My Files\Sonata-Software\SpringFramework\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+866293775.index
+3901895594.index
+992678457.index
+3187323841.index
+1679537692.index
+3709764251.index

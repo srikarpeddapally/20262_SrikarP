@@ -1,0 +1,20 @@
+package com.sonata.Controller;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sonata.Model.Login;
+import com.sonata.Repository.LoginRepository;
+
+@RestController
+public class LoginController {
+	
+	Optional<Login> l1;
+	
+	@Autowired
+	private LoginRepository prepsoritory;
+	
+	
+}

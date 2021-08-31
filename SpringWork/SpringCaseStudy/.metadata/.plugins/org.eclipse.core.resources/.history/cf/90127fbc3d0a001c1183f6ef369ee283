@@ -1,0 +1,11 @@
+package com.sonata.Model;
+
+
+@Entity
+public class Task {
+	
+	@Id
+	private int Task_ID;
+	private 
+
+}

@@ -1,0 +1,10 @@
+server.port=8080
+spring.datasource.dbcp2.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/ProductDetails
+spring.datasource.username=root
+spring.datasource.password=srikar
+#Hibernate ddl auto (create, create-drop, validate, update)
+spring.jpa.hibernate.ddl-auto=update
+
+
+
